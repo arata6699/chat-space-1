@@ -6183,3 +6183,127 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 452ms (Views: 448.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-05-06 16:56:24 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (14.0ms)
+  Rendered messages/_message.html.haml (16.5ms)
+  Rendered messages/index.html.haml within layouts/application (68.1ms)
+Completed 200 OK in 524ms (Views: 508.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 16:56:59 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+     9:           %p.side-header__user-name Yuk Mizoguchi
+    10:           %ul.user-menu
+    11:             %li.user-menu__edit-user &nbsp
+    12:               = link_to do
+    13:                 = fa_icon 'pencil-square-o', class: 'icon'
+    14:             %li.user-menu__new-group 
+    15:               = link_to do
+  
+app/views/messages/index.html.haml:12
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (168.5ms)
+Started GET "/" for ::1 at 2019-05-06 16:57:09 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+     9:           %p.side-header__user-name Yuk Mizoguchi
+    10:           %ul.user-menu
+    11:             %li.user-menu__edit-user&nbsp
+    12:               = link_to do
+    13:                 = fa_icon 'pencil-square-o', class: 'icon'
+    14:             %li.user-menu__new-group 
+    15:               = link_to do
+  
+app/views/messages/index.html.haml:12
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mizoguchiyuki/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (143.1ms)
+Started GET "/" for ::1 at 2019-05-06 16:57:22 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (10.0ms)
+  Rendered messages/_message.html.haml (12.0ms)
+  Rendered messages/index.html.haml within layouts/application (36.6ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 16:57:38 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (11.6ms)
+  Rendered messages/_message.html.haml (13.0ms)
+  Rendered messages/index.html.haml within layouts/application (36.0ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 16:57:45 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (9.4ms)
+  Rendered messages/_message.html.haml (15.7ms)
+  Rendered messages/index.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 16:58:48 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (9.5ms)
+  Rendered messages/_message.html.haml (14.1ms)
+  Rendered messages/index.html.haml within layouts/application (37.1ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 16:58:55 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (11.1ms)
+  Rendered messages/_message.html.haml (12.7ms)
+  Rendered messages/index.html.haml within layouts/application (38.8ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 17:00:43 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (17.0ms)
+  Rendered messages/_message.html.haml (15.4ms)
+  Rendered messages/index.html.haml within layouts/application (48.6ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-06 17:00:49 +0900
+Processing by MessagesController#index as HTML
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (9.4ms)
+  Rendered messages/_message.html.haml (18.7ms)
+  Rendered messages/index.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
