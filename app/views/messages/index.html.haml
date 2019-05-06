@@ -1,0 +1,38 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .wrapper
+      .chat-side
+        .side-header
+          %p.side-header__user-name Yuk Mizoguchi
+          %ul.user-menu
+            %li.user-menu__edit-user
+              = link_to do
+                = fa_icon 'pencil-square-o', class: 'icon'
+                &thinsp;
+            %li.user-menu__new-group 
+              = link_to do
+                = fa_icon 'cog', class: 'icon'
+        = render 'group'
+
+      .chat-main
+        .main-headr
+          .current-group
+            %h2.current-group__name tech
+            %ul.member-list 
+              Member&nbsp;:&nbsp; 
+              %li.member-list__member Yuki&nbsp;Mizoguchi
+          %a(href="")
+            .main-header__edit-btn Edit
+        .maessages
+          = render 'message'          
+        .form  
+          %form
+            .form__input-box
+              %input(type="text" placeholder="type a message")
+              %label.image-label
+                = fa_icon "image", class: "icon"
+                %input(type="file" name="datafile" id="filesend")
+            %input(type="submit" value="Send")
