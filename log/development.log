@@ -8874,3 +8874,79 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2019-05-07 13:11:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (28.8ms)
+  Rendered messages/_message.html.haml (16.9ms)
+  Rendered messages/index.html.haml within layouts/application (87.5ms)
+  Rendered layouts/_flash.html.haml (3.1ms)
+Completed 200 OK in 563ms (Views: 467.0ms | ActiveRecord: 46.1ms)
+
+
+Started GET "/" for ::1 at 2019-05-07 13:11:26 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (10.6ms)
+  Rendered messages/_message.html.haml (12.1ms)
+  Rendered messages/index.html.haml within layouts/application (38.9ms)
+  Rendered layouts/_flash.html.haml (2.3ms)
+Completed 200 OK in 118ms (Views: 97.5ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2019-05-07 13:11:27 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/edit.html.haml within layouts/application
+  Rendered users/edit.html.haml within layouts/application (45.7ms)
+  Rendered layouts/_flash.html.haml (1.9ms)
+Completed 200 OK in 104ms (Views: 90.7ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-05-07 13:11:31 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/R/3PeNd3pgbIcqhLOvLi2T/lQibP8uFSw5xG3L/hUu87QrATBaMpsNmyvgBwcAa/xkIJK04EWtqVvFjM+hlnQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-05-07 13:11:31 +0900
+Processing by MessagesController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-05-07 13:11:31 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_links.html.haml (2.8ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (18.0ms)
+  Rendered layouts/_flash.html.haml (14.4ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-05-07 13:11:32 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mjkBiuelnVs2+tYEbWqXZz62htVchunch1jGZENj2nTNxT5hENaY/Tfa0O3AY9DRzbPaHM2QLGvIDSm8YBSSCw==", "user"=>{"email"=>"miniseven777@yahoo.co.jp", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'miniseven777@yahoo.co.jp' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 224ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-07 13:11:32 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_group.html.haml (21.6ms)
+  Rendered messages/_message.html.haml (32.4ms)
+  Rendered messages/index.html.haml within layouts/application (74.9ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 113ms (Views: 109.2ms | ActiveRecord: 0.3ms)
+
+
