@@ -6,14 +6,15 @@
     .wrapper
       .chat-side
         .side-header
-          %p.side-header__user-name Yuk Mizoguchi
+          %p.side-header__user-name
+            = current_user.name
           %ul.user-menu
             %li.user-menu__edit-user
-              = link_to do
+              = link_to  do
                 = fa_icon 'pencil-square-o', class: 'icon'
                 &thinsp;
             %li.user-menu__new-group 
-              = link_to do
+              = link_to edit_user_path(current_user) do
                 = fa_icon 'cog', class: 'icon'
         = render 'group'
 
