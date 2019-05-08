@@ -14179,3 +14179,53 @@ Processing by GroupsController#create as HTML
 Completed 200 OK in 77ms (Views: 60.7ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for ::1 at 2019-05-08 20:25:36 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (22.7ms)
+  Rendered groups/index.html.haml within layouts/application (28.4ms)
+  Rendered layouts/_flash.html.haml (2.2ms)
+Completed 200 OK in 87ms (Views: 67.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/groups/14/messages" for ::1 at 2019-05-08 20:25:38 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"14"}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (7.1ms)
+  Rendered messages/_message.html.haml (14.6ms)
+  Rendered messages/index.html.haml within layouts/application (44.5ms)
+  Rendered layouts/_flash.html.haml (2.1ms)
+Completed 200 OK in 106ms (Views: 89.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/groups/15/messages" for ::1 at 2019-05-08 20:25:38 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"15"}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (7.3ms)
+  Rendered messages/_message.html.haml (13.6ms)
+  Rendered messages/index.html.haml within layouts/application (44.2ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 107ms (Views: 88.4ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/groups/16/messages" for ::1 at 2019-05-08 20:25:39 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (10.4ms)
+  Rendered messages/_message.html.haml (13.8ms)
+  Rendered messages/index.html.haml within layouts/application (52.0ms)
+  Rendered layouts/_flash.html.haml (2.1ms)
+Completed 200 OK in 106ms (Views: 91.8ms | ActiveRecord: 5.4ms)
+
+
