@@ -22,7 +22,7 @@
 - has_many :users, through: :group_users
 - has_many :group_users
 
-## groups_usersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
