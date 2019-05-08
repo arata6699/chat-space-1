@@ -14229,3 +14229,55 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 106ms (Views: 91.8ms | ActiveRecord: 5.4ms)
 
 
+Started GET "/groups/16/messages" for ::1 at 2019-05-08 20:43:50 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"16"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (212.8ms)
+  Rendered messages/_message.html.haml (46.1ms)
+  Rendered messages/index.html.haml within layouts/application (306.8ms)
+  Rendered layouts/_flash.html.haml (3.1ms)
+Completed 200 OK in 836ms (Views: 638.3ms | ActiveRecord: 153.9ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-08 20:43:54 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/_form.html.haml (1049.9ms)
+  Rendered groups/new.html.haml within layouts/application (1057.8ms)
+  Rendered layouts/_flash.html.haml (2.4ms)
+Completed 200 OK in 1180ms (Views: 1100.8ms | ActiveRecord: 21.3ms)
+
+
+Started POST "/groups" for ::1 at 2019-05-08 20:44:12 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zBstsebVYhpHT8arF2DsW8vuBdUZc+6B+uxGagpGkbyFV2BsO/3L+fP7pwOPBpVxxqesomvjQGBWdC7ZbRRdOA==", "group"=>{"name"=>"ids: [ ]", "user_ids"=>["", "2", "3"]}, "commit"=>"登録する"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (2, 3)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `groups` (`name`, `created_at`, `updated_at`) VALUES ('ids: [ ]', '2019-05-08 11:44:12', '2019-05-08 11:44:12')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `group_users` (`user_id`, `created_at`, `updated_at`) VALUES (2, '2019-05-08 11:44:12', '2019-05-08 11:44:12')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `group_users` (`user_id`, `created_at`, `updated_at`) VALUES (3, '2019-05-08 11:44:12', '2019-05-08 11:44:12')[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `group_users` SET `group_id` = 17 WHERE `group_users`.`id` = 17[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE `group_users` SET `group_id` = 17 WHERE `group_users`.`id` = 18[0m
+  [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 56ms (ActiveRecord: 33.7ms)
+
+
+Started GET "/" for ::1 at 2019-05-08 20:44:12 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 3[0m
+  Rendered shared/_group.html.haml (8.9ms)
+  Rendered groups/index.html.haml within layouts/application (15.0ms)
+  Rendered layouts/_flash.html.haml (2.3ms)
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 0.7ms)
+
+
