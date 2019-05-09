@@ -9,14 +9,16 @@
       .chat-main
         .main-headr
           .current-group
-            %h2.current-group__name tech
+            %h2.current-group__name
+              = @group.name
             %ul.member-list 
               Member&nbsp;:&nbsp; 
-              %li.member-list__member Yuki&nbsp;Mizoguchi
+              %li.member-list__member
+                -# = @group.user
           = link_to edit_group_path(@group) do
             .main-header__edit-btn Edit
         .maessages
-          = render 'message'          
+          = render @messages       
         .form  
           = form_for [@group, @message] do |f|
             .form__input-box
