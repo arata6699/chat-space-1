@@ -3,12 +3,12 @@
     width: 300px;
     height: 100%;
     box-sizing: border-box;
-    @include textBold();
     a{
       color: $sideTextColor;
       text-decoration: none;
     }
    .side-header{
+    @include textBold();
      background-color: #253141;
      height: 100px;
      display: flex;
@@ -30,12 +30,13 @@
      overflow: scroll;
      box-sizing: border-box;
      .group{
-      &__group-name{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__group-message{
-        font-size: 11px;
+       &__group-name{
+         font-size: 15px;
+         margin-bottom: 5px;
+       }
+       &__group-message{
+         font-size: 11px;
+         margin-bottom: 40px;
       }
      }
    }
