@@ -9,19 +9,21 @@
       .chat-main
         .main-headr
           .current-group
-            %h2.current-group__name tech
+            %h2.current-group__name
+              = @group.name
             %ul.member-list 
               Member&nbsp;:&nbsp; 
-              %li.member-list__member Yuki&nbsp;Mizoguchi
-          %a(href="")
+              %li.member-list__member
+                -# = @group.user
+          = link_to edit_group_path(@group) do
             .main-header__edit-btn Edit
         .maessages
-          = render 'message'          
+          = render @messages       
         .form  
-          %form
+          = form_for [@group, @message] do |f|
             .form__input-box
-              %input(type="text" placeholder="type a message")
-              %label.image-label
-                = fa_icon "image", class: "icon"
-                %input(type="file" name="datafile" id="filesend")
-            %input(type="submit" value="Send")
+              = f.text_field :text, placeholder: "type a message"
+              = f.label :image, class: "image-label" do
+                = f.file_field :image, class: "filesend"
+                = fa_icon "picture-o", class: "icon"
+            = f.submit "Send" , class: "chat-group-form__action-btn"

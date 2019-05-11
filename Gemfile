@@ -60,11 +60,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'devise'
-<<<<<<< Updated upstream
-gem 'pry-rails'
-gem 'rails-i18n'
-=======
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
->>>>>>> Stashed changes
+
