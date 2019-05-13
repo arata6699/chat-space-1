@@ -19,7 +19,7 @@
             .main-header__edit-btn Edit
         .maessages
           = render @messages       
-        .form  
+        .form.new_message  
           = form_for [@group, @message] do |f|
             .form__input-box
               = f.text_field :text, placeholder: "type a message"
