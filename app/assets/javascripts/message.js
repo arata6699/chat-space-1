@@ -40,7 +40,9 @@ $(function(){
       $('.maessages').append(html)
       // console.log(html);
       $('.input').val('')
+      $('.chat-group-form__action-btn').attr('disabled', false);
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
     })
   })
+  // debugger
 });
