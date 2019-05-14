@@ -1,22 +1,22 @@
 $(function(){
   function buildHTML(message){
-    // <p>
-    // <img src = '${message.image}' >               
-    // </p>
+
+   image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    
     var html = 
                   `<div class= message>
                     <div class= upper-info>
                       <p class= "upper-info__user">
                         ${message.user_name}
                       </p>
-                      <p "upper-info__date">
+                      <p class= "upper-info__date">
                         ${message.created_at}
                       </p>
-                   </div>
+                    </div>
                       <p>
                         ${message.text}
                       </p>
-                     
+                      ${image}
                   </div>`
     return html;
   }
@@ -39,7 +39,7 @@ $(function(){
       var html = buildHTML(data);
       $('.maessages').append(html)
       // console.log(html);
-      $('.input').val('')
+      $('.form__input-box').val('')
       $('.chat-group-form__action-btn').attr('disabled', false);
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
     })
