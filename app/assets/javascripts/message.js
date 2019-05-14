@@ -43,6 +43,9 @@ $(function(){
       $('.chat-group-form__action-btn').attr('disabled', false);
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
     })
+    .fail(function(){
+      alert('入力してください');
+    })
   })
   // debugger
 });
