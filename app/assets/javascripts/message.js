@@ -23,9 +23,7 @@ $(function(){
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    // console.log(...formData.entries());
     var url = $(this).attr('action')
-    // console.log(url)
     $.ajax({
       url: url,
       type: "POST",
@@ -35,10 +33,8 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      // console.log(data);
       var html = buildHTML(data);
       $('.maessages').append(html)
-      // console.log(html);
       $('.form__input-box').val('')
       $('.chat-group-form__action-btn').attr('disabled', false);
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
@@ -47,5 +43,4 @@ $(function(){
       alert('入力してください');
     })
   })
-  // debugger
 });
