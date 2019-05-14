@@ -19,10 +19,10 @@
             .main-header__edit-btn Edit
         .maessages
           = render @messages       
-        .form.new_message  
-          = form_for [@group, @message] do |f|
+        .form 
+          = form_for [@group, @message], html: {class: 'new_message'} do |f|
             .form__input-box
-              = f.text_field :text, placeholder: "type a message"
+              = f.text_field :text, placeholder: "type a message", class: "input"
               = f.label :image, class: "image-label" do
                 = f.file_field :image, class: "filesend"
                 = fa_icon "picture-o", class: "icon"
