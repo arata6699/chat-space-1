@@ -35300,3 +35300,15 @@ Processing by GroupsController#edit as HTML
 Completed 200 OK in 100ms (Views: 78.6ms | ActiveRecord: 9.7ms)
 
 
+Started GET "/groups/26/edit" for ::1 at 2019-05-15 19:51:11 +0900
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 26 LIMIT 1[0m
+  Rendering groups/edit.html.haml within layouts/application
+  Rendered groups/_form.html.haml (8.3ms)
+  Rendered groups/edit.html.haml within layouts/application (16.2ms)
+  Rendered layouts/_flash.html.haml (2.4ms)
+Completed 200 OK in 731ms (Views: 724.6ms | ActiveRecord: 0.6ms)
+
+
