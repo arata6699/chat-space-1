@@ -35,7 +35,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.maessages').append(html)
-      $('.form__input-box').val('')
+      $('.new_message')[0].reset();
       $('.chat-group-form__action-btn').attr('disabled', false);
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
     })
