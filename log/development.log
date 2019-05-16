@@ -41552,3 +41552,113 @@ Processing by UsersController#index as JSON
 Completed 200 OK in 26ms (Views: 18.1ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/users?keyword=" for ::1 at 2019-05-16 12:51:48 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (2.0ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-16 12:51:51 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/_form.html.haml (11.3ms)
+  Rendered groups/new.html.haml within layouts/application (15.9ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 96ms (Views: 48.1ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-16 12:51:52 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/_form.html.haml (13.4ms)
+  Rendered groups/new.html.haml within layouts/application (18.1ms)
+  Rendered layouts/_flash.html.haml (2.6ms)
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users?keyword=%E3%81%88" for ::1 at 2019-05-16 12:51:53 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>"え"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%え%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (1.6ms)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users?keyword=" for ::1 at 2019-05-16 12:51:54 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (1.8ms)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users?keyword=e" for ::1 at 2019-05-16 12:51:56 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>"e"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%e%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (1.8ms)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users?keyword=" for ::1 at 2019-05-16 12:51:58 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (1.8ms)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-16 12:51:59 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/_form.html.haml (15.0ms)
+  Rendered groups/new.html.haml within layouts/application (20.0ms)
+  Rendered layouts/_flash.html.haml (3.3ms)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-16 12:52:03 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/_form.html.haml (11.7ms)
+  Rendered groups/new.html.haml within layouts/application (18.2ms)
+  Rendered layouts/_flash.html.haml (2.0ms)
+Completed 200 OK in 88ms (Views: 57.9ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/groups/new" for ::1 at 2019-05-16 12:52:03 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  Rendered groups/_form.html.haml (14.9ms)
+  Rendered groups/new.html.haml within layouts/application (19.7ms)
+  Rendered layouts/_flash.html.haml (2.2ms)
+Completed 200 OK in 67ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users?keyword=e" for ::1 at 2019-05-16 12:52:05 +0900
+Processing by UsersController#index as JSON
+  Parameters: {"keyword"=>"e"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE (name LIKE('%e%')) AND (`users`.`id` != 1)[0m
+  Rendered users/index.json.jbuilder (1.7ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
