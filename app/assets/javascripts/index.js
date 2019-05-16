@@ -16,11 +16,11 @@ $(function() {
 
   function appendMember(member){
     var html = 
-              `<div class="chat-group-user clearfix, id=chat-group-user-${ member.id }>
-                <input name='chat_group[user_ids][]' type='hidden' value=${ member.id }>
-                <p class="chat-group-user__name">${member.name}</p>
+              `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${member.id}'>
+                <input name='group[user_ids][]' type='hidden' value='${member.id}'>
+                <p class='chat-group-user__name'>${member.name}</p>
+                <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
               </div>`
-
     member_list.append(html)
   }
 
@@ -49,8 +49,10 @@ $(function() {
     var member = {};
     member.id = $(this).attr("data-user-id");
     member.name = $(this).attr("data-user-name");
-    appendMember(member);
-    
+    $(this).parent().remove()
+    appendMember(member);    
   })
-
+  $(document).on('click', ".user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn", function(){
+    $(this).parent().remove()
+  })
 });
