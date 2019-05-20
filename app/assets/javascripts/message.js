@@ -4,7 +4,7 @@ $(function(){
    image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
     
     var html = 
-                  `<div class= message>
+                  `<div class= message data-id= ${message.id} data-group_id="${message.group_id}">
                     <div class= upper-info>
                       <p class= "upper-info__user">
                         ${message.user_name}
