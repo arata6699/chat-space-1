@@ -1,10 +1,13 @@
 $(function(){
   function buildHTML(message){
 
-   image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    var addImage = "";
+    if (message.image) {
+      addImage = `<img src="${message.image}" class="lower-message__image">`;
+    }
     
     var html = 
-                  `<div class= message>
+                  `<div class= "message" data-id= "${message.id}" data-group-id= "${message.group_id}">
                     <div class= upper-info>
                       <p class= "upper-info__user">
                         ${message.user_name}
@@ -16,7 +19,7 @@ $(function(){
                       <p>
                         ${message.text}
                       </p>
-                      ${image}
+                      ${addImage}
                   </div>`
     return html;
   }
@@ -43,4 +46,31 @@ $(function(){
       alert('入力してください');
     })
   })
+  var reloadMessages = function() {
+    last_message_id = $('.message:last').data('id');
+    group_id = $('.message:last').data('group-id');
+    if(window.location.href.match(/\/groups\/\d+\/messages/))
+    $.ajax({
+      url: `/groups/${group_id}/api/messages`,
+      type: 'GET',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      var insertHTML = '';
+      $.each(messages, function(i, message){
+        if (message.id > last_message_id ) {
+          insertHTML += buildHTML(message);
+          $('.maessages').append(insertHTML);
+        }
+      });
+      $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  }
+  $(function() {
+      setInterval(reloadMessages, 5000);
+    });
 });
