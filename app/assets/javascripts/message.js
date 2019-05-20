@@ -49,7 +49,7 @@ $(function(){
   var reloadMessages = function() {
     last_message_id = $('.message:last').data('id');
     group_id = $('.message:last').data('group-id');
-    console.log(group_id, last_message_id);
+    if(window.location.href.match(/\/groups\/\d+\/messages/))
     $.ajax({
       url: `/groups/${group_id}/api/messages`,
       type: 'GET',
@@ -57,13 +57,11 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages);
       var insertHTML = '';
       $.each(messages, function(i, message){
         if (message.id > last_message_id ) {
           insertHTML += buildHTML(message);
           $('.maessages').append(insertHTML);
-          console.log(insertHTML);
         }
       });
       $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
