@@ -2,3 +2,4 @@
 public/images/test_image.jpg
 *.log
 log/development.log
+config/secrets.yml
