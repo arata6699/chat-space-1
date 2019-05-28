@@ -45,7 +45,7 @@ $(function(){
     .fail(function(){
       alert('入力してください');
     })
-    
+    return false;
   })
   var reloadMessages = function() {
     last_message_id = $('.message:last').data('id');
@@ -72,5 +72,4 @@ $(function(){
     });
   }
   setInterval(reloadMessages, 5000);
-  console.log(reloadMessages);
 });
