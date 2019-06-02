@@ -45,6 +45,7 @@ $(function(){
     .fail(function(){
       alert('入力してください');
     })
+    return false;
   })
   var reloadMessages = function() {
     last_message_id = $('.message:last').data('id');
@@ -62,15 +63,13 @@ $(function(){
         if (message.id > last_message_id ) {
           insertHTML += buildHTML(message);
           $('.maessages').append(insertHTML);
+          $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
         }
       });
-      $('.maessages').animate({ scrollTop: $('.maessages')[0].scrollHeight }, 'fast');
     })
     .fail(function() {
       console.log('error');
     });
   }
-  $(function() {
-      setInterval(reloadMessages, 5000);
-    });
+  setInterval(reloadMessages, 5000);
 });
