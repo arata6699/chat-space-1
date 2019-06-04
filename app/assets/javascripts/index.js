@@ -3,7 +3,7 @@ $(function() {
   var search_list = $('#user-search-result');
   var member_list = $('.chat-group-users');
 
-  function appendProduct(user){
+  function appendUser(user){
     var html =
               `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">
@@ -13,6 +13,11 @@ $(function() {
                 </div>`
     search_list.append(html);
   }
+
+  function appendNoUser(word) {
+    var html = `<p style="color:red;">※${word}</p>`
+    search_list.append(html);
+  };
 
   function appendMember(member){
     var html = 
@@ -34,10 +39,13 @@ $(function() {
     })
     .done(function(users) {
       $("#user-search-result").empty();
-      if (users.length !== 0) {
+      if (users.length != 0 && input != 0) {
         users.forEach(function(user){
-          appendProduct(user);
+          appendUser(user);
         });
+      }
+      else{
+        appendNoUser("一致するユーザーはいません")
       }
     })
     .fail(function(){
