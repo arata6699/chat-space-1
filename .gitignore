@@ -2,3 +2,4 @@ public/uploads/*
 /tmp/*
 public/images/test_image.jpg
 *.log
+config/secrets.yml
