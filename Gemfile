@@ -75,3 +75,6 @@ gem 'fog-aws'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+gem "ruby-debug-ide"
+gem "debase"
